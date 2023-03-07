@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
 
-
 export function TeacherEdit({ ucard }) {
   return ucard ? <EditTeacherForm card={ucard} /> : <h1>Loading...</h1>;
 }
@@ -48,31 +47,36 @@ function EditTeacherForm({ card }) {
               label="UserID"
               size="small"
               defaultValue={ucard.Username}
-              onChange={(event) => setUser(event.target.value)} />
+              onChange={(event) => setUser(event.target.value)}
+            />
             <TextField
               id="outlined-error-helper-text"
               label="Password"
               size="small"
               defaultValue={ucard.Password}
-              onChange={(event) => setPassword(event.target.value)} />
+              onChange={(event) => setPassword(event.target.value)}
+            />
             <TextField
               id="outlined-error-helper-text"
               label="EmailID"
               size="small"
               defaultValue={ucard.Email}
-              onChange={(event) => setEmailid(event.target.value)} />
+              onChange={(event) => setEmailid(event.target.value)}
+            />
             <TextField
               id="outlined-error-helper-text"
               label="Date of Birth"
               size="small"
               defaultValue={ucard.Dateofbirth}
-              onChange={(event) => setDob(event.target.value)} />
+              onChange={(event) => setDob(event.target.value)}
+            />
             <TextField
               id="outlined-error-helper-text"
               label="Ph.no"
               size="small"
               defaultValue={ucard.phonenumber}
-              onChange={(event) => setPhno(event.target.value)} />
+              onChange={(event) => setPhno(event.target.value)}
+            />
             <Button
               onClick={(e) => addStudent(e)}
               variant="contained"

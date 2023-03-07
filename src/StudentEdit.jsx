@@ -1,11 +1,11 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
 
-export function StudentEdit({ ucard}) {
+export function StudentEdit({ ucard }) {
   return ucard ? <EditStudentForm card={ucard} /> : <h1>Loading...</h1>;
 }
 

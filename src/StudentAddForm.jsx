@@ -2,32 +2,31 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import {v4 as uuid} from "uuid";
+import { v4 as uuid } from "uuid";
 import { useNavigate } from "react-router-dom";
 
-export function StudentAddForm({list, setList}) {
+export function StudentAddForm({ list }) {
   const navigate = useNavigate();
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [emailid, setEmailid] = useState("");
   const [dob, setDob] = useState("");
   const [phno, setPhno] = useState("");
-  
+
   const addUser = (e) => {
     e.preventDefault();
-    const ids=uuid();
-    let newid=ids.slice(0,8);
+    const ids = uuid();
+    let newid = ids.slice(0, 8);
     list.push({
-      id:newid,
+      id: newid,
       Username: user,
       Password: password,
       Email: emailid,
       Dateofbirth: dob,
       phonenumber: phno,
     });
-    navigate("/student")
+    navigate("/student");
   };
-
 
   return (
     <div>
@@ -70,7 +69,7 @@ export function StudentAddForm({list, setList}) {
               onChange={(event) => setPhno(event.target.value)}
             />
             <Button
-              onClick={(e)=>addUser(e)}
+              onClick={(e) => addUser(e)}
               variant="contained"
               size="small"
               color="success"

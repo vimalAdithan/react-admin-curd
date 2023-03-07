@@ -1,4 +1,4 @@
-export function Cards({ user, deletebutton,editbutton,infobutton}) {
+export function Cards({ user, deletebutton, editbutton, infobutton }) {
   return (
     <div>
       <div className="card">

@@ -10,10 +10,18 @@ export function TeacherInfo({ staff }) {
           <p>Name: {Staff.Username}</p>
         </div>
         <div className="cardinner">
-          <p><b>Password:</b> {Staff.Password}</p>
-          <p><b>Email:</b> {Staff.Email}</p>
-          <p><b>Date of birth:</b> {Staff.Dateofbirth}</p>
-          <p><b>phone number:</b> {Staff.phonenumber}</p>
+          <p>
+            <b>Password:</b> {Staff.Password}
+          </p>
+          <p>
+            <b>Email:</b> {Staff.Email}
+          </p>
+          <p>
+            <b>Date of birth:</b> {Staff.Dateofbirth}
+          </p>
+          <p>
+            <b>phone number:</b> {Staff.phonenumber}
+          </p>
         </div>
       </div>
     </div>

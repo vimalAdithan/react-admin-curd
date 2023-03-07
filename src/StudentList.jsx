@@ -3,7 +3,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import CreateIcon from "@mui/icons-material/Create";
 import InfoIcon from "@mui/icons-material/Info";
 
-
 import Button from "@mui/material/Button";
 import { Cards } from "./Cards";
 import { useNavigate } from "react-router-dom";
@@ -57,9 +56,11 @@ export function StudentList({ list, setList }) {
                 <CreateIcon />
               </IconButton>
             }
-            infobutton={<IconButton onClick={() => navigate(`/student/${index}`)}>
-            <InfoIcon />
-          </IconButton>}
+            infobutton={
+              <IconButton onClick={() => navigate(`/student/${index}`)}>
+                <InfoIcon />
+              </IconButton>
+            }
           />
         ))}
       </div>

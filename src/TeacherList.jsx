@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 import { Cards } from "./Cards";
 import { useNavigate } from "react-router-dom";
 
-
 export function TeacherList({ staff, setStaff }) {
   const navigate = useNavigate();
 
@@ -41,21 +40,27 @@ export function TeacherList({ staff, setStaff }) {
             key={index}
             user={usr}
             id={index}
-            deletebutton={<IconButton onClick={() => deleteCard(index)}>
-              <DeleteIcon />
-            </IconButton>}
-            editbutton={<IconButton
-              onClick={() => {
-                navigate(`/teacher/edit/${index}`);
-                handleEdit(usr);
-              }}
-            >
-              <CreateIcon />
-            </IconButton>}
-            infobutton={<IconButton onClick={() => navigate(`/teacher/${index}`)}>
-            <InfoIcon />
-          </IconButton>}
-            />
+            deletebutton={
+              <IconButton onClick={() => deleteCard(index)}>
+                <DeleteIcon />
+              </IconButton>
+            }
+            editbutton={
+              <IconButton
+                onClick={() => {
+                  navigate(`/teacher/edit/${index}`);
+                  handleEdit(usr);
+                }}
+              >
+                <CreateIcon />
+              </IconButton>
+            }
+            infobutton={
+              <IconButton onClick={() => navigate(`/teacher/${index}`)}>
+                <InfoIcon />
+              </IconButton>
+            }
+          />
         ))}
       </div>
     </div>
