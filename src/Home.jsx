@@ -6,12 +6,19 @@ export function Home() {
   const navigate = useNavigate();
   return (
     <div>
+      <div>
+        <div className="dash">
+          <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+            <a onClick={() => navigate("/")}>Home</a>
+            <a onClick={() => navigate("/student")}>Student</a>
+            <a onClick={() => navigate("/teacher")}>Teacher</a>
+          </div>
+        </div>
+      </div>
       <div className="home">
-        <h1>ADMIN</h1>
+        <h1>ADMIN DASH</h1>
         <Stack spacing={2} direction="row">
-          <Button variant="contained" onClick={() => navigate("/student")}>
-            Student Details
-          </Button>
+          <Button variant="contained">Student Details</Button>
           <Button variant="contained" onClick={() => navigate("/teacher")}>
             Teacher Details
           </Button>
